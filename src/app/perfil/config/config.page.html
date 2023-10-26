@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> <- EDITAR </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <div class="container">
+    <div class="ion-card">
+      <img src="https://img.freepik.com/psd-gratuitas/ilustracao-3d-de-avatar-ou-perfil-humano_23-2150671132.jpg?w=826&t=st=1697495729~exp=1697496329~hmac=33cf9d59f59a73d62e58000b9a117abbf7096017788e41444851e2d0a86e9faf" alt="Card image">
+      <form (ngSubmit)="uploadFile()" #fileForm="ngForm">
+        <ion-item>
+          <ion-label position="stacked">Escolha uma imagem</ion-label>
+          <input type="file" id="myFile" name="filename" (change)="onFileChange($event)" accept=".jpg, .png, .pdf">
+        </ion-item>
+        
+      <ion-card-content>
+        
+        <ion-card-title>Nome e Sobrenome</ion-card-title>
+        <ion-card-subtitle>Descrição</ion-card-subtitle>
+        
+        <ion-list>
+          <ion-item>
+            <ion-label position="stacked">Nome do Usuário</ion-label>
+            <ion-input type="text" id="user"></ion-input>
+          </ion-item>
+          
+          <ion-item>
+            <ion-label position="stacked">Email</ion-label>
+            <ion-input type="email" id="email"></ion-input>
+          </ion-item>
+          
+          <ion-item>
+            <ion-label position="stacked">Senha</ion-label>
+            <ion-input type="password" id="senha"></ion-input>
+          </ion-item>
+          
+          <ion-item>
+            <ion-label position="stacked">CPF</ion-label>
+            <ion-input type="text" id="cpf"></ion-input>
+          </ion-item>
+          
+          <ion-item>
+            <ion-label position="stacked">Tel</ion-label>
+            <ion-input type="tel" id="tel"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+   
+    <ion-button expand="full" color="primary">Enviar</ion-button>
+
+  
